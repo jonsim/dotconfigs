@@ -1,0 +1,23 @@
+[user]
+	name = Jonathan Simmonds
+	email = jonathan.simmonds@arm.com
+[core]
+	editor = vi
+[alias]
+	bl = log --pretty='%C(red)%h%C(reset) %s %C(green)(%C(blue)%an%C(green), %ar)%C(reset)'
+	blm = log --pretty='%C(red)%h%C(reset) %s %C(green)(%C(blue)%an%C(green), %ar)%C(reset)' --author Jonathan
+	gl = log --graph --pretty=format:'%C(red)%h%C(reset) %C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%cn>%C(reset)' --abbrev-commit
+	bls = !git --no-pager log --pretty=\"%C(red)%h%C(reset) %s %C(green)(%C(blue)%an%C(green), %ar)%C(reset)\" -n10
+	blsm= !git --no-pager log --pretty=\"%C(red)%h%C(reset) %s %C(green)(%C(blue)%an%C(green), %ar)%C(reset)\" -n10 --author Jonathan
+	gls = !git --no-pager log --graph --pretty=format:\"%C(red)%h%C(reset) %C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%cn>%C(reset)\" --abbrev-commit -n10
+	gdiff = difftool
+[init]
+	templatedir = ~/.git_template
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[color]
+	ui = auto
+[push]
+	default = simple
